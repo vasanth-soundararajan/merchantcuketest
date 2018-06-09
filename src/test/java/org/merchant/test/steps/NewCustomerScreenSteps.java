@@ -1,21 +1,25 @@
 package org.merchant.test.steps;
 
+import org.junit.Assert;
+import org.merchant.test.common.Constants;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class NewCustomerScreenSteps {
-	private static final String APP_URL = "http://ec2-54-174-213-136.compute-1.amazonaws.com:8080/admin";
-	WebDriver driver;
+
+    public WebDriver driver;
+    
+    public NewCustomerScreenSteps() {
+    	driver = Hooks.driver;
+    }
 
 	@Given("^Opened application and routed to New user creation page$")
 	public void opened_application_and_routed_to_New_user_creation_page() throws Throwable {
-		driver = new FirefoxDriver();
-		driver.get(APP_URL);
+		driver.get(Constants.BASE_URL);
 		assert driver.getTitle().contains("Admin");
 	}
 
@@ -49,8 +53,5 @@ public class NewCustomerScreenSteps {
 		} catch (Exception e) {
 			System.out.println("Exception :" + e);
 		}
-		// driver.close();
-		driver.quit();
 	}
-
 }
