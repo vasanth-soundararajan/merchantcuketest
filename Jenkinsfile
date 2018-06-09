@@ -10,7 +10,7 @@ node {
    sh "${mvnHome}/bin/mvn clean compile"
    
    stage 'Test'
-   sauce('saucelabs') {
+   sauce('sauceconnect') {
        sauceconnect(useGeneratedTunnelIdentifier: true, verboseLogging: true) {
            sh "${mvnHome}/bin/mvn test"
        }
