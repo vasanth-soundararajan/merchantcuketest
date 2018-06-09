@@ -1,21 +1,21 @@
 windows_10_edge:
-  seleniumVersion: '3.4.0'
+  seleniumVersion: '2.53.1'
   platform: Windows 10
-  browserName: MicrosoftEdge
-  version: '14.14393'
+  browserName: firefox
+  version: '47.0'
 windows_8_ie:
-  seleniumVersion: '3.4.0'
+  seleniumVersion: '2.53.1'
   platform: Windows 8
-  browserName: Internet Explorer
-  version: '10.0'
+  browserName: firefox
+  version: '47.0'
 mac_sierra_chrome:
-  seleniumVersion: '3.4.0'
+  seleniumVersion: '2.53.1'
   platform: macOS 10.12
-  browserName: Chrome
-  version: '65.0'
+  browserName: firefox
+  version: '47.0'
 windows_7_ff:
-  seleniumVersion: '3.4.0'
+  seleniumVersion: '2.53.1'
   platform: Windows 7
   browserName: firefox
-  version: '59.0'
+  version: '47.0'
   
