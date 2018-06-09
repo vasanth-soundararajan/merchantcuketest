@@ -32,7 +32,7 @@ public class SauceUtils {
     }
 
     public static DesiredCapabilities createCapabilities(String value) throws FileNotFoundException {
-        Map<String, Object> platform = parseYAML("src/test/java/com/yourcompany/utils/platforms.yml", value);
+        Map<String, Object> platform = parseYAML("src/test/java/org/merchant/test/merchantcuketest/platforms.yml", value);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         for (String key : platform.keySet()) {
             capabilities.setCapability(key, platform.get(key));
