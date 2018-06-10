@@ -48,7 +48,6 @@ public class NewUserPage {
     }
 
     public void verifyNewUserCreation() {
-        //Need to add wait and check
         Assert.assertEquals(flashNotice.getText().equalsIgnoreCase("User was successfully created.") , true);
     }
 
