@@ -2,6 +2,7 @@ package org.merchant.test.steps;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.merchant.test.common.Constants;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -52,12 +53,8 @@ public class UserFiltersSteps {
     @Then("^Checked the results$")
     public void checked_the_results() throws Throwable {
         List<WebElement> users = driver.findElements(By.xpath("html/body/div[1]/div[4]/div[1]/div/form/div[2]/div[1]/div/div/table/tbody"));
-
-        if(users.size() > 0) {
-          for (WebElement li : users) {
-
-          }
-        }
+        
+        Assert.assertTrue(users.size() > 0);
     }
     
     @And("^delete user$")
