@@ -37,7 +37,7 @@ public class Hooks {
 	private void setupSauce(Scenario scenario) throws FileNotFoundException, MalformedURLException {
 		String platformProperty = System.getProperty("platform");
 
-		String platform = (platformProperty != null) ? platformProperty : "windows_10_edge";
+		String platform = (platformProperty != null) ? platformProperty : "windows_10_firefox";
 
         DesiredCapabilities caps = SauceUtils.createCapabilities(platform);
 
