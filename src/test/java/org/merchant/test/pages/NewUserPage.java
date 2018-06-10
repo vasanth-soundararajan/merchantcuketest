@@ -34,12 +34,7 @@ public class NewUserPage {
         PageFactory.initElements(driver,this);
     }
 
-    /**
-     * To create new user
-     * @param username
-     * @param pass
-     * @param email
-     */
+
     public void createUser(String username,String pass,String email){
         userName.sendKeys(username);
         passWord.sendKeys(pass);

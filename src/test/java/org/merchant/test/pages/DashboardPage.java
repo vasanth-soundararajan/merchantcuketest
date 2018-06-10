@@ -1,7 +1,6 @@
 package org.merchant.test.pages;
 
 import org.junit.Assert;
-import org.merchant.test.common.Constants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,9 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Dashboard page object class
- */
 public class DashboardPage {
 
     @FindBy(xpath = "//*[@id='page_title']")
@@ -28,11 +24,8 @@ public class DashboardPage {
         PageFactory.initElements(driver, this);
     }
 
-    /**
-     * To verify this page
-     */
     public void verifyPage() {
-        Assert.assertEquals(titleDashboard.getText().equalsIgnoreCase(Constants.TXT_DASHBOARD), true);
+        Assert.assertEquals(titleDashboard.getText().equalsIgnoreCase("Dashboard"), true);
     }
 
     public boolean isUsersLinkAvailable() {
@@ -48,9 +41,6 @@ public class DashboardPage {
         return isAvailable;
     }
 
-    /**
-     * To click on users tab
-     */
     public void clickOnUsers() {
         if (isUsersLinkAvailable()) {
             tabUsers.click();
