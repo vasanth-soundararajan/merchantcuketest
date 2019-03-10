@@ -2,7 +2,7 @@ node {
    // Mark the code checkout 'stage'....
    stage 'Checkout'
    
-   git url: 'https://github.com/lavanya132/merchantcuketest.git'
+   git url: 'https://github.com/vasanth-soundararajan/merchantcuketest.git'
    
    def mvnHome = tool 'M3'
    
